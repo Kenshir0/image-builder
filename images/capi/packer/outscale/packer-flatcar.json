@@ -50,17 +50,6 @@
   ],
   "provisioners": [
     {
-      "environment_vars": [
-        "FLATCAR_CHANNEL={{user `flatcar_channel`}}",
-        "FLATCAR_VERSION={{user `flatcar_version`}}",
-        "DEBUG_SSH_PUBLIC_KEY={{user `debug_ssh_public_key`}}"
-      ],
-      "expect_disconnect": true,
-      "pause_after": "15s",
-      "script": "./packer/outscale/scripts/install-flatcar.sh",
-      "type": "shell"
-    },
-    {
       "execute_command": "BUILD_NAME={{user `build_name`}}; if [[ \"${BUILD_NAME}\" == *\"flatcar\"* ]]; then sudo {{.Vars}} -S -E bash '{{.Path}}'; fi",
       "script": "./packer/files/flatcar/scripts/bootstrap-flatcar.sh",
       "type": "shell"
