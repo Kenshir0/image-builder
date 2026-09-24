@@ -33,7 +33,7 @@
         ]
       },
       "ssh_interface": "public_ip",
-      "ssh_username": "outscale",
+      "ssh_username": "{{ user `ssh_username` }}",
       "tags": {
         "Base_OMI_Name": "{{ .SourceOMIName }}",
         "Extra": "{{ .SourceOMITags.TagName }}",
