@@ -5,6 +5,7 @@
   "distribution_release": "{{env `FLATCAR_CHANNEL`}}",
   "distribution_version": "{{env `FLATCAR_CHANNEL`}}-{{env `FLATCAR_VERSION`}}",
   "image_name": "flatcar-test-9999.9.103-tormath1",
+  "owner": "123134234735",
   "kubernetes_cni_source_type": "http",
   "kubernetes_source_type": "http",
   "python_path": "/opt/pypy/site-packages",
